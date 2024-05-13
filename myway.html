@@ -45,10 +45,6 @@
         let myElms = ["Good morning", "my Wolrd 👋!!!", "shining everday ", "🌟✨"];
         let count = -1;
 
-        button.addEventListener("click", () => {
-            autotyping(myElms)
-        })
-
         const autotyping = (elms) => {
             // let myType = "";
             // for (let i = 0; i < elms[0].length; i++) {
@@ -59,8 +55,18 @@
             // typeWriter.innerHTML += myType
             count++;
             typeWriter.innerHTML += elms[0][count]
+            let autocount = 10 + Math.random() * 100;
+            setTimeout(() => {
+                autotyping(myElms)
+            }, autocount);
         }
-        // autotyping(myElms)
+        // autotyping(myElms);
+        const autoDeleting = (elms) => {
+            setTimeout(() => {
+                autotyping(myElms, 1000)
+            }, 1000);
+        }
+
     </script>
 </body>
 
