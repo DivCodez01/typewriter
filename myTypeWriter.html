@@ -40,7 +40,7 @@
                 let typeElmTm = 10 + Math.random() * 100;
                 setTimeout(() => {
                     autotyping(txt, incrm, func);
-                }, 100);
+                }, typeElmTm);
             } else if (incrm == txt.length + 1) {
                 autoDeleting(txt, incrm, func);
             }
@@ -49,6 +49,9 @@
         const autoDeleting = (txt, incrm, func) => {
             if (incrm <= 0) {
                 typeWriterElms.innerHTML = txt.substring(0, incrm++)
+                setTimeout(() => {
+
+                },);
             }
         }
     </script>
