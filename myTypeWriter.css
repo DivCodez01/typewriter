@@ -11,11 +11,16 @@ body {
 
 #typeWriter {
     width: 100vw;
-    border-left: 5px solid white;
-    padding-left: 5px;
-    animation: animate 1s infinite;
+}
+
+#typeWriter::after {
+    content: "";
+    border-right: 2px solid white;
+    padding-right: 3px;
+    animation: animate .4s infinite;
     opacity: 0;
 }
+
 
 @keyframes animate {
     100% {
