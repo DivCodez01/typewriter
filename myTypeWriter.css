@@ -20,6 +20,8 @@ body {
     position: absolute;
     justify-content: center;
     align-items: center;
+    animation: animate 2s infinite;
+    opacity: 0;
 }
 
 .sub-wrapper {
