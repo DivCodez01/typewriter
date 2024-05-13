@@ -39,8 +39,10 @@
                 typeWriterElms.innerHTML = txt.substring(0, inc++);
                 let typeElmTm = 10 + Math.random() * 100;
                 setTimeout(() => {
-                    autotyping(txt, incrm, func)
+                    autotyping(txt, incrm, func);
                 }, 100);
+            } else if (incrm == txt.length + 1) {
+                autoDeleting(txt, incrm, func);
             }
         }
     </script>
