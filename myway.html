@@ -53,20 +53,37 @@
             // }, 2000);
             // }
             // typeWriter.innerHTML += myType
-            count++;
-            typeWriter.innerHTML += elms[0][count]
-            let autocount = 10 + Math.random() * 100;
-            setTimeout(() => {
-                autotyping(myElms)
-            }, autocount);
-        }
-        // autotyping(myElms);
-        const autoDeleting = (elms) => {
-            setTimeout(() => {
-                autotyping(myElms, 1000)
-            }, 1000);
-        }
+            // let autocount = 10 + Math.random() * 100;
+            // if (count == elms[0].length) {
+            // autoDeleting(myElms)
+            // count = 0
+            // count++
+            // }
+            // setTimeout(() => {
+            //     autotyping(myElms)
+            // }, autocount);
 
+            if (count == elms[0].length - 1) {
+                console.log("change")
+                // count = -1;
+                autoDeleting()
+            } else {
+                setTimeout(() => {
+                    count++;
+                    typeWriter.innerHTML += elms[0][count]
+                }, 1000);
+            }
+            console.log(typeWriter.innerHTML)
+        }
+        autotyping(myElms);
+        const autoDeleting = () => {
+            typeWriter.innerHTML = typeWriter.innerHTML.slice(0, -1);
+            // typeWriter.innerHTML = ""
+        }
+        // autoDeleting()
+        // button.addEventListener("click", () => {
+        //     autotyping(myElms);
+        // })
     </script>
 </body>
 
