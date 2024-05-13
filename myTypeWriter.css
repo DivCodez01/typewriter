@@ -1,0 +1,16 @@
+body {
+    background: rgb(17, 17, 17);
+    font-family: "roboto", sans-serif;
+    font-size: 2em;
+    color: white;
+}
+
+.sub-wrapper {
+    text-align: center;
+}
+
+#typeWriter {
+    width: 100vw;
+    border-right: 5px solid white;
+    padding-right: 5px;
+}
