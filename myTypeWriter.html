@@ -31,7 +31,7 @@
         </div>
     </div>
     <script>
-        const typeWriterElms = document.getElementById("typewriter");
+        const typeWriterElms = document.getElementById("typeWriter");
         const myText = ["My name is !!!", "NDIZIHIWE Gakiza Divin", "I'm the one who help you to know", "Coding...", "😲😲😲"];
 
         const autotyping = (txt, incrm, func) => {
@@ -42,7 +42,9 @@
                     autotyping(txt, incrm, func);
                 }, typeElmTm);
             } else if (incrm == txt.length + 1) {
-                autoDeleting(txt, incrm, func);
+                setTimeout(() => {
+                    autoDeleting(txt, incrm, func);
+                }, 1000);
             }
         }
 
@@ -65,10 +67,12 @@
                 }, 1000);
             } else if (myText[incr] == "undefined") {
                 autotyping(myText[incrm], 0, function () {
-                    startTyping(incrm + 1)
+                    startTyping(incrm + 1);
                 })
             }
         }
+
+        startTyping(0)
     </script>
 </body>
 
