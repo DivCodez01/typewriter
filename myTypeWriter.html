@@ -61,7 +61,7 @@
         const startTyping = (incr) => {
             if (incr == myText[incr].length + 1) {
                 setTimeout(() => {
-
+                    startTyping(0)
                 }, 1000);
             }
         }
