@@ -37,6 +37,10 @@
         const autotyping = (txt, incrm, func) => {
             if (incrm < txt.length + 1) {
                 typeWriterElms.innerHTML = txt.substring(0, inc++);
+                let typeElmTm = 10 + Math.random() * 100;
+                setTimeout(() => {
+                    autotyping(txt, incrm, func)
+                }, 100);
             }
         }
     </script>
