@@ -45,45 +45,40 @@
         let myElms = ["Good morning", "my Wolrd 👋!!!", "shining everday ", "🌟✨"];
         let count = -1;
 
-        const autotyping = (elms) => {
-            // let myType = "";
-            // for (let i = 0; i < elms[0].length; i++) {
-            // setTimeout(() => {
-            // myType = elms[0][i];
-            // }, 2000);
-            // }
-            // typeWriter.innerHTML += myType
-            // let autocount = 10 + Math.random() * 100;
-            // if (count == elms[0].length) {
-            // autoDeleting(myElms)
-            // count = 0
-            // count++
-            // }
-            // setTimeout(() => {
-            //     autotyping(myElms)
-            // }, autocount);
-
-            if (count == elms[0].length - 1) {
-                console.log("change")
-                // count = -1;
-                autoDeleting()
-            } else {
-                setTimeout(() => {
-                    count++;
-                    typeWriter.innerHTML += elms[0][count]
-                }, 1000);
+        function kokolo() {
+            let countChange = 10 + Math.random() * 100;
+            // setInterval(() => {
+            count++;
+            typeWriter.innerHTML += myElms[0][count]
+            // }, countChange);
+            if (count == myElms[0].length - 1) {
+                console.log("good")
+                clearInterval(lolo)
+                // count = 0;
+                // typeWriter.innerHTML = ""
             }
-            console.log(typeWriter.innerHTML)
         }
-        autotyping(myElms);
-        const autoDeleting = () => {
-            typeWriter.innerHTML = typeWriter.innerHTML.slice(0, -1);
-            // typeWriter.innerHTML = ""
+        let countChange = 200 + Math.random() * 100;
+        let clearChange = 5 + Math.random() * 100;
+        let lolo = setInterval(() => {
+            kokolo()
+        }, countChange);
+
+        function popolo() {
+            // if (Boolean(clearInterval(lolo)) == "true") {
+            setTimeout(() => {
+                typeWriter.innerHTML = typeWriter.innerHTML.slice(0, -1);
+            }, 3000);
+            // }
         }
-        // autoDeleting()
-        // button.addEventListener("click", () => {
-        //     autotyping(myElms);
-        // })
+
+        setInterval(() => {
+            popolo()
+        }, clearChange);
+
+        button.addEventListener("click", () => {
+            popolo()
+        })
     </script>
 </body>
 
