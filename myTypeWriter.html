@@ -64,7 +64,9 @@
                     startTyping(0)
                 }, 1000);
             } else if (myText[incr] == "undefined") {
-                autotyping(myText[incrm], 0)
+                autotyping(myText[incrm], 0, function () {
+                    startTyping(incrm + 1)
+                })
             }
         }
     </script>
