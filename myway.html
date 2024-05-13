@@ -40,45 +40,57 @@
         <button name="button">yydedy</button>
     </div>
     <script>
-        const typeWriter = document.querySelector(".typeWriter");
-        const button = document.querySelector("button")
-        let myElms = ["Good morning", "my Wolrd 👋!!!", "shining everday ", "🌟✨"];
-        let count = -1;
+        function dddddddd() {
+            const typeWriter = document.querySelector(".typeWriter");
+            const button = document.querySelector("button")
+            let myElms = ["Good morning", "my Wolrd 👋!!!", "shining everday ", "🌟✨"];
+            let count = -1;
 
-        function kokolo() {
-            let countChange = 10 + Math.random() * 100;
-            // setInterval(() => {
-            count++;
-            typeWriter.innerHTML += myElms[0][count]
-            // }, countChange);
-            if (count == myElms[0].length - 1) {
-                console.log("good")
-                clearInterval(lolo)
-                // count = 0;
-                // typeWriter.innerHTML = ""
+            function kokolo() {
+                let countChange = 10 + Math.random() * 100;
+                // setInterval(() => {
+                count++;
+                typeWriter.innerHTML += myElms[0][count]
+                // }, countChange);
+                if (count == myElms[0].length - 1) {
+                    console.log("good")
+                    clearInterval(lolo)
+                    // count = 0;
+                    // typeWriter.innerHTML = ""
+                }
             }
-        }
-        let countChange = 200 + Math.random() * 100;
-        let clearChange = 5 + Math.random() * 100;
-        let lolo = setInterval(() => {
-            kokolo()
-        }, countChange);
+            let countChange = 200 + Math.random() * 100;
+            let clearChange = 5 + Math.random() * 100;
+            let lolo = setInterval(() => {
+                kokolo()
+            }, countChange);
 
-        function popolo() {
-            // if (Boolean(clearInterval(lolo)) == "true") {
+            function popolo() {
+                setTimeout(() => {
+                    typeWriter.innerHTML = typeWriter.innerHTML.slice(0, -1);
+                }, 4000);
+            }
+
+            let popo = setInterval(() => {
+                popolo()
+            }, clearChange);
+
+            button.addEventListener("click", () => {
+                popolo()
+            })
+
             setTimeout(() => {
-                typeWriter.innerHTML = typeWriter.innerHTML.slice(0, -1);
-            }, 3000);
-            // }
+                if (typeWriter.innerHTML == "") {
+                    console.log("jomodo");
+                    clearInterval(popo);
+                }
+            }, 5000);
         }
+        // dddddddd()
 
         setInterval(() => {
-            popolo()
-        }, clearChange);
-
-        button.addEventListener("click", () => {
-            popolo()
-        })
+            dddddddd()
+        }, 9000);
     </script>
 </body>
 
