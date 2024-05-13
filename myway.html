@@ -35,12 +35,32 @@
 <body>
     <div class="wrapper">
         <!-- <div class="sub-wrapper"> -->
-        <span class="typeWriter">wdw</span>
+        <span class="typeWriter"></span>
         <!-- </div> -->
+        <button name="button">yydedy</button>
     </div>
     <script>
         const typeWriter = document.querySelector(".typeWriter");
+        const button = document.querySelector("button")
         let myElms = ["Good morning", "my Wolrd 👋!!!", "shining everday ", "🌟✨"];
+        let count = -1;
+
+        button.addEventListener("click", () => {
+            autotyping(myElms)
+        })
+
+        const autotyping = (elms) => {
+            // let myType = "";
+            // for (let i = 0; i < elms[0].length; i++) {
+            // setTimeout(() => {
+            // myType = elms[0][i];
+            // }, 2000);
+            // }
+            // typeWriter.innerHTML += myType
+            count++;
+            typeWriter.innerHTML += elms[0][count]
+        }
+        // autotyping(myElms)
     </script>
 </body>
 
